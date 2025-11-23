@@ -1,0 +1,348 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5; /* light grey / white look */
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    background-color: #1d3d8f; /* blue bar like screenshot */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 4rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Sections */
+.section {
+    padding: 3rem 8%;
+    background-color: #f5f5f5;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 8%;
+    background-color: #e2e2e2; /* similar to screenshot */
+}
+
+.hero-text {
+    max-width: 55%;
+}
+
+.intro {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.role {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.animated-role {
+    display: inline-block;
+    animation: colorChange 4s linear infinite;
+}
+
+.sub-text {
+    font-size: 0.95rem;
+}
+
+/* Hero image (simple illustration) */
+.hero-image {
+    /* only a narrow column for the photo */
+    flex: 0 0 220px;          /* width of photo area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* circle container that controls the size */
+.avatar-circle {
+    width: 200px;             /* change this to make photo bigger/smaller */
+    height: 200px;
+    border-radius: 50%;
+    background-color: #cfd8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;         /* hide anything outside the circle */
+}
+
+/* actual image inside the circle */
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+/* simple avatar */
+.avatar-head {
+    width: 90px;
+    height: 90px;
+    background: #f5c7a9;
+    border-radius: 50%;
+    margin-top: 18px;
+}
+
+.avatar-body {
+    width: 120px;
+    height: 90px;
+    background: #1d3d8f;
+    border-radius: 60px 60px 20px 20px;
+    margin-top: 10px;
+}
+
+/* About */
+.about-section h2,
+.skills-section h2,
+.projects-section h2,
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    max-width: 900px;
+    margin-bottom: 0.8rem;
+}
+
+/* Skills */
+.skills-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* GLOW VERSION */
+.skill-card {
+    background-color: #123084;
+    border-radius: 25px;
+    padding: 1.6rem 1rem;
+    color: #fff;
+    text-align: center;
+    border: 3px solid #ffffff;
+
+    /* base glow */
+    box-shadow: 0 0 18px rgba(30, 136, 229, 0.65);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    /* stronger glow on hover */
+    box-shadow: 0 0 30px rgba(30, 136, 229, 0.95);
+}
+
+.skill-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.skill-level {
+    font-size: 0.9rem;
+}
+
+/* Projects */
+.projects-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.project-image {
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder gradient images – replace with real screenshots if you want */
+.img-1 {
+    background-image: linear-gradient(120deg, #1d3d8f, #673ab7);
+}
+
+.img-2 {
+    background-image: linear-gradient(120deg, #ff9800, #3f51b5);
+}
+
+.project-content {
+    padding: 1rem 1.2rem 1.4rem;
+}
+
+.project-content h3 {
+    margin-bottom: 0.4rem;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-form {
+    max-width: 420px;
+    background-color: #ffffff;
+    padding: 1.5rem 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 3px;
+    border: 1px solid #b0bec5;
+    font-size: 0.9rem;
+}
+
+.btn-send {
+    width: 100%;
+    padding: 0.55rem 0;
+    background-color: #1d3d8f;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-send:hover {
+    background-color: #0f2561;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #1d3d8f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 8%;
+    font-size: 0.85rem;
+}
+
+.back-to-top {
+    background-color: #ffffff;
+    color: #1d3d8f;
+    padding: 0.35rem 0.9rem;
+    border-radius: 18px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0f2561;
+    color: #ffffff;
+}
+
+/* Animated Text Colors */
+@keyframes colorChange {
+    0% {
+        color: #00c853; /* green */
+    }
+    25% {
+        color: #2962ff; /* blue */
+    }
+    50% {
+        color: #d50000; /* red */
+    }
+    75% {
+        color: #00bcd4; /* cyan */
+    }
+    100% {
+        color: #00c853;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: left;
+        padding: 2.5rem 8%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .nav-links a {
+        margin-left: 0.75rem;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
